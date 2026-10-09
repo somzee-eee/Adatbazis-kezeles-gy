@@ -1,0 +1,161 @@
+SAJÁT RÉSZ
+
+1
+SELECT `orszag`, `fovaros` FROM `orszagok` WHERE `orszag` = "Madagaszkár"
+
+MADAGASZKÁR
+ANTANANARIVO
+
+2
+SELECT `orszag`, `fovaros` FROM `orszagok` WHERE `fovaros` = "OUAGADOUGOU"
+
+BURKINA FASO
+OUAGADOUGOU
+
+3
+SELECT `orszag`, `autojel` FROM `orszagok` WHERE `autojel` = "TT"
+
+TRINIDAD ÉS TOBAGO
+TT
+
+4
+SELECT `orszag`, `penzjel` FROM `orszagok` WHERE `penzjel` = "SGD"
+
+SZINGAPÚR
+SGD
+
+5
+SELECT `orszag`, `telefon` FROM `orszagok` WHERE `telefon` = "61"
+
+AUSZTRÁLIA
+61
+
+6
+SELECT `orszag`, `terulet`*1000 FROM `orszagok` WHERE `orszag` = "Monaco"
+
+MONACO
+1950.00
+
+7
+SELECT `orszag`, `nepesseg`*1000 FROM `orszagok` WHERE `orszag` = "Málta"
+
+MÁLTA
+392000
+
+8
+SELECT `orszag`, `nepesseg`/`terulet`*1000 AS nepsuruseg FROM `orszagok` WHERE `orszag` = "Japán"
+
+JAPÁN
+342.3031
+
+9
+SELECT SUM(nepesseg)/1000000 AS milliard_fo FROM `orszagok`
+
+7.0763
+
+10
+SELECT SUM(terulet) AS terulet_osszesen FROM `orszagok`
+
+133598224.66
+
+11
+SELECT AVG(nepesseg) AS atlag_nepesseg FROM `orszagok`
+
+36475.9691
+
+12
+SELECT AVG(terulet) AS atlag_terulet FROM `orszagok`
+
+688650.642577
+
+13
+SELECT SUM(nepesseg)*1000 / SUM(terulet) AS fold_nepsurusege FROM `orszagok`
+
+52.9673
+
+14
+SELECT COUNT(*) FROM `orszagok` WHERE `terulet`>1000000;
+
+29
+
+15
+SELECT COUNT(*) FROM `orszagok` WHERE `terulet`<100;
+
+5
+
+16
+SELECT COUNT(*) FROM `orszagok` WHERE `nepesseg`<20000;
+
+143
+
+17
+SELECT COUNT(*) FROM `orszagok` WHERE `terulet`<100 OR `nepesseg`<20000;
+
+143
+
+18
+SELECT `orszag` `terulet` FROM `orszagok` WHERE `terulet` BETWEEN 50000 AND 150000
+
+PORTUGÁLIA
+AUSZTRIA
+MAGYARORSZÁG
+SZERBIA
+BULGÁRIA
+CSEHORSZÁG
+GÖRÖGORSZÁG
+IZLAND
+ÍRORSZÁG
+KUBA
+NEPÁL
+ERITREA
+JORDÁNIA
+BANGLADES
+MALAWI
+HONDURAS
+NICARAGUA
+PANAMA
+GUATEMALA
+BENIN
+LIBÉRIA
+TOGO
+SIERRA LEONE
+SRI LANKA
+DÉL-KOREA
+25
+
+19
+SELECT `orszag` `nepesseg` FROM `orszagok` WHERE `nepesseg` BETWEEN 8000 AND 12000
+
+PORTUGÁLIA
+SVÉDORSZÁG
+AUSZTRIA
+MAGYARORSZÁG
+SZERBIA
+CSEHORSZÁG
+GÖRÖGORSZÁG
+BELGIUM
+KUBA
+TUNÉZIA
+BOLÍVIA
+ZAMBIA
+CSÁD
+GUINEA
+MALI
+NIGER
+RUANDA
+SZENEGÁL
+SZOMÁLIA
+DOMINIKAI KÖZTÁRSASÁG
+HAITI
+AZERBAJDZSÁN
+BELARUSZ
+28
+
+20
+SELECT `orszag` `nep_fovaros` FROM `orszagok` WHERE `nep_fovaros` >20000
+
+JAPÁN
+MEXIKÓ
+2
+
+21
