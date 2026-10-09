@@ -1,5 +1,3 @@
-SAJÁT RÉSZ
-
 1
 SELECT `orszag`, `fovaros` FROM `orszagok` WHERE `orszag` = "Madagaszkár"
 
